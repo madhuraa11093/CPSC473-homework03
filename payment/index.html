@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>coffeerun</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <header>
+    <h1>Payment information:</h1>
+  </header>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form data-payment="form" id="paymentDetails">
+        <h1></h1>
+        <div class="form-group">
+          <div class="form-group">
+            <label for="name">
+              <span>Name:</span>
+            </label>
+            <input type="text" id="name" name="name">
+          </div>
+          <label for="card">
+            <span>Card type:</span>
+          </label>
+          <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+          <a href="#modal" id = "modal" rel="modal:open" class="btn btn-default">Process payments</a>
+        </div>
+        <div class="form-group">
+          <label for="number">
+            <span>Card number:</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="number" name="cardnumber">
+
+        </div>
+        <div class="form-group">
+          <label for="date">
+            <span>Expiration date:</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>formatted as mm/yy</em>
+          </label>
+          <input type="text" id="date" name="expiration">
+        </div>
+        <button type="submit" class="btn btn-default">submit</button>
+        <!--button type="Process payments" class="btn btn-default" data-toggle="modal" data-target="#myModal">Process Payments</button-->
+        <button type="reset" class="btn btn-default">Reset</button>
+      </form>
+    </div>
+  </div>
+	<div id="ex1" class="modal">
+	  <p></p>
+	</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <script src="scripts/payment.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+
+</html>
